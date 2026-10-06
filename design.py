@@ -115,6 +115,11 @@ device_width = device_xmax - device_xmin
 device_height = device_ymax - device_ymin
 
 print("Device bounding box:")
+for name, ref in (("DWDM", dwdm_ref), ("Ring reference", ring_ref)):
+    print(
+        f"{name} bbox: X {ref.xmin:.3f} -> {ref.xmax:.3f} um; "
+        f"Y {ref.ymin:.3f} -> {ref.ymax:.3f} um"
+    )
 print(f"  X: {device_xmin:.3f} -> {device_xmax:.3f} um")
 print(f"  Y: {device_ymin:.3f} -> {device_ymax:.3f} um")
 print(
